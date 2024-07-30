@@ -13,14 +13,4 @@ export function fetchImages(query) {
       }
       return response.json();
     })
-    .then(data => {
-      if (data.hits.length === 0) {
-        throw new Error('No images found');
-      }
-      return data;
-    })
-    .catch(error => {
-      console.error('Error fetching images:', error);
-      throw error;
-    });
 }
